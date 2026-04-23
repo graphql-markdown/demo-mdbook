@@ -1,0 +1,21 @@
+[book]
+title = "GraphQL-Markdown demo with mdBook"
+authors = ["Gregory Heitz"]
+language = "en"
+src = "src"
+
+[build]
+build-dir = "book"
+
+[output.html]
+no-section-label = true
+admonitions = true
+additional-css = ["./theme/github-dark-dimmed.min.css"]
+git-repository-url = "https://github.com/graphql-markdown/demo-mdbook"
+
+[output.html.fold]
+enable = true 
+level = 0
+
+[output.html.print]
+enable = false
