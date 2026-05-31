@@ -8,7 +8,7 @@ import { runGraphQLMarkdown } from "@graphql-markdown/cli";
 // when the core package performs a dynamic import of the MDX module.
 const { createRequire } = await import("node:module");
 const require = createRequire(import.meta.url);
-const mdxParser = pathToFileURL(
+const formatter = pathToFileURL(
   require.resolve("@graphql-markdown/formatters/mdbook"),
 ).href;
 
@@ -20,7 +20,7 @@ await runGraphQLMarkdown(
     rootPath: "./src",
     baseURL: "graphql",
     homepage: "./index.md",
-    mdxParser,
+    formatter,
     loaders: {
       GraphQLFileLoader: "@graphql-tools/graphql-file-loader",
     },
