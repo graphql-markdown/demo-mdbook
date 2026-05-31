@@ -1,0 +1,48 @@
+name: Deploy to GitHub Pages
+
+run-name: "Deploy to GitHub Pages by @${{ github.actor }}"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Build and deploy
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install mdbook
+        run: |
+          mkdir -p ~/bin
+          curl -sSL https://github.com/rust-lang/mdBook/releases/download/v0.4.40/mdbook-v0.4.40-x86_64-unknown-linux-gnu.tar.gz | tar xz -C ~/bin
+          echo "$HOME/bin" >> $GITHUB_PATH
+
+      - name: Install Node dependencies
+        run: npm ci
+
+      - name: Generate GraphQL docs
+        run: npm run generate
+
+      - name: Build book
+        run: mdbook build
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./book
