@@ -2,7 +2,7 @@
 
 This project demonstrates how to generate GraphQL documentation with GraphQL-Markdown for an mdBook site.
 
-**Live demo:** [edno.github.io/demo-mdbook](https://edno.github.io/demo-mdbook/)
+**Live demo:** [graphql-markdown.dev/demo-mdbook](https://graphql-markdown.dev/demo-mdbook/)
 
 ## Quick start
 
