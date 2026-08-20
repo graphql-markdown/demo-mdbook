@@ -8,4 +8,4 @@ scalar Boolean
 
 ### Member Of
 
-[`include`](/graphql/operations/directives/include.md) **directive**&nbsp;&bull;&nbsp;[`Language`](/graphql/types/objects/language.md) **object**&nbsp;&bull;&nbsp;[`skip`](/graphql/operations/directives/skip.md) **directive**
+[`include`](../../operations/directives/include.md) **directive**<span class="gqlmd-mdx-bullet">&nbsp;●&nbsp;</span>[`Language`](../objects/language.md) **object**<span class="gqlmd-mdx-bullet">&nbsp;●&nbsp;</span>[`skip`](../../operations/directives/skip.md) **directive**

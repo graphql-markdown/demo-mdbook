@@ -8,4 +8,4 @@ scalar ID
 
 ### Member Of
 
-[`continent`](/graphql/operations/queries/continent.md) **query**&nbsp;&bull;&nbsp;[`Continent`](/graphql/types/objects/continent.md) **object**&nbsp;&bull;&nbsp;[`country`](/graphql/operations/queries/country.md) **query**&nbsp;&bull;&nbsp;[`Country`](/graphql/types/objects/country.md) **object**&nbsp;&bull;&nbsp;[`language`](/graphql/operations/queries/language.md) **query**&nbsp;&bull;&nbsp;[`Language`](/graphql/types/objects/language.md) **object**
+[`continent`](../../operations/queries/continent.md) **query**<span class="gqlmd-mdx-bullet">&nbsp;●&nbsp;</span>[`Continent`](../objects/continent.md) **object**<span class="gqlmd-mdx-bullet">&nbsp;●&nbsp;</span>[`country`](../../operations/queries/country.md) **query**<span class="gqlmd-mdx-bullet">&nbsp;●&nbsp;</span>[`Country`](../objects/country.md) **object**<span class="gqlmd-mdx-bullet">&nbsp;●&nbsp;</span>[`language`](../../operations/queries/language.md) **query**<span class="gqlmd-mdx-bullet">&nbsp;●&nbsp;</span>[`Language`](../objects/language.md) **object**

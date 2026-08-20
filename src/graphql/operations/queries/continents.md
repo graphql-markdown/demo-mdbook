@@ -8,4 +8,4 @@ continents: [Continent!]!
 
 ### Type
 
-#### [`Continent`](/graphql/types/objects/continent.md) **object**
+#### [<span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">Continent</code></span>](../../types/objects/continent.md) **object**
