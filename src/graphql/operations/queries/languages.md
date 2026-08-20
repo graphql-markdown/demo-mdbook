@@ -8,4 +8,4 @@ languages: [Language!]!
 
 ### Type
 
-#### [`Language`](/graphql/types/objects/language.md) **object**
+#### [<span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">Language</code></span>](../../types/objects/language.md) **object**

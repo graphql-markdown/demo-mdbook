@@ -12,16 +12,16 @@ type Continent {
 
 ### Fields
 
-#### [`Continent.code`](#)&nbsp;&bull;&nbsp;[`ID!`](/graphql/types/scalars/id.md) **non-null** **scalar**
+#### [<span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">Continent</code>.<code class="gqlmd-mdx-entity-name">code</code></span>](#)<span class="gqlmd-mdx-bullet">&nbsp;●&nbsp;</span>[<span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">ID!</code></span>](../scalars/id.md) **non-null** **scalar**
 
-#### [`Continent.name`](#)&nbsp;&bull;&nbsp;[`String!`](/graphql/types/scalars/string.md) **non-null** **scalar**
+#### [<span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">Continent</code>.<code class="gqlmd-mdx-entity-name">name</code></span>](#)<span class="gqlmd-mdx-bullet">&nbsp;●&nbsp;</span>[<span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">String!</code></span>](../scalars/string.md) **non-null** **scalar**
 
-#### [`Continent.countries`](#)&nbsp;&bull;&nbsp;[`[Country!]!`](/graphql/types/objects/country.md) **non-null** **object**
+#### [<span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">Continent</code>.<code class="gqlmd-mdx-entity-name">countries</code></span>](#)<span class="gqlmd-mdx-bullet">&nbsp;●&nbsp;</span>[<span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">[Country!]!</code></span>](./country.md) **non-null** **object**
 
 ### Returned By
 
-[`continent`](/graphql/operations/queries/continent.md) **query**&nbsp;&bull;&nbsp;[`continents`](/graphql/operations/queries/continents.md) **query**
+[`continent`](../../operations/queries/continent.md) **query**<span class="gqlmd-mdx-bullet">&nbsp;●&nbsp;</span>[`continents`](../../operations/queries/continents.md) **query**
 
 ### Member Of
 
-[`Country`](/graphql/types/objects/country.md) **object**
+[`Country`](./country.md) **object**
