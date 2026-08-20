@@ -173,7 +173,29 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="graphql-api-reference"><a class="header" href="#graphql-api-reference">GraphQL API Reference</a></h1>
+                        <h1 id="graphql-markdown--mdbook-demo"><a class="header" href="#graphql-markdown--mdbook-demo">GraphQL-Markdown · mdBook Demo</a></h1>
+<p>This site is generated from a GraphQL schema using <a href="https://github.com/graphql-markdown/graphql-markdown">graphql-markdown</a> with the <strong>mdBook formatter preset</strong>.</p>
+<h2 id="what-this-demo-shows"><a class="header" href="#what-this-demo-shows">What this demo shows</a></h2>
+<ul>
+<li>Frontmatter is suppressed — mdBook renders <code>---</code> as literal content, so the formatter returns an empty string instead.</li>
+<li>Admonitions fall back to blockquote style (<code>&gt; **NOTE**</code>) since mdBook has no native admonition syntax.</li>
+<li>Links keep the <code>.md</code> extension — mdBook resolves them natively.</li>
+<li>A <code>SUMMARY.md</code> is built after generation to wire all pages into the mdBook navigation.</li>
+</ul>
+<h2 id="generation-pipeline"><a class="header" href="#generation-pipeline">Generation pipeline</a></h2>
+<ol>
+<li><code>npm run generate</code> runs GraphQL-Markdown against <code>schema.graphql</code>.</li>
+<li>Pages are written to <code>src/graphql/</code> using the mdBook formatter.</li>
+<li><code>src/SUMMARY.md</code> is rebuilt by scanning the output directory.</li>
+<li><code>mdbook serve</code> / <code>mdbook build</code> renders the final site.</li>
+</ol>
+<h2 id="key-files"><a class="header" href="#key-files">Key files</a></h2>
+<ul>
+<li><code>scripts/generate-docs.mjs</code> — runs GraphQL-Markdown and rebuilds <code>SUMMARY.md</code>.</li>
+<li><code>scripts/custom-mdbook-mdx.mjs</code> — wraps the mdBook formatter preset.</li>
+<li><code>schema.graphql</code> — source GraphQL schema (countries API).</li>
+<li><code>book.toml</code> — mdBook configuration.</li>
+</ul>
 
                     </main>
 
