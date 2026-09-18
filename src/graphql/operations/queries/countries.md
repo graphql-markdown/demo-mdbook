@@ -1,10 +1,15 @@
 # countries
 
+
+
+
 No description
+
 
 ```graphql
 countries: [Country!]!
 ```
+
 
 ### Type
 

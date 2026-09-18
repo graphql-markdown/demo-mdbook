@@ -1,10 +1,15 @@
 # continents
 
+
+
+
 No description
+
 
 ```graphql
 continents: [Continent!]!
 ```
+
 
 ### Type
 

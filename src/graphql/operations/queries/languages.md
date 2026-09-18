@@ -1,10 +1,15 @@
 # languages
 
+
+
+
 No description
+
 
 ```graphql
 languages: [Language!]!
 ```
+
 
 ### Type
 
