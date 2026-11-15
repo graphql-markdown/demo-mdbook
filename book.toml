@@ -12,6 +12,7 @@ no-section-label = true
 admonitions = true
 additional-css = ["./theme/github-dark-dimmed.min.css", "./theme/inline-code.css"]
 git-repository-url = "https://github.com/graphql-markdown/demo-mdbook"
+additional-js = ["./theme/footer.js"]
 
 [output.html.fold]
 enable = true 
