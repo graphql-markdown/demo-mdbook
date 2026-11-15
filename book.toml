@@ -9,6 +9,9 @@ build-dir = "book"
 
 [output.html]
 no-section-label = true
+# mdBook 0.5 lists page headings in the sidebar; the generated field headings
+# hold nested links and show up as blank entries there, so keep it off.
+sidebar-header-nav = false
 admonitions = true
 additional-css = ["./theme/github-dark-dimmed.min.css"]
 git-repository-url = "https://github.com/graphql-markdown/demo-mdbook"
