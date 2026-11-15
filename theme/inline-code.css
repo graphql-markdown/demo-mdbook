@@ -1,0 +1,10 @@
+/*
+ * mdBook adds the `hljs` class to inline code too, so the dark highlight
+ * theme (github-dark-dimmed) also paints inline code dark. Inside links,
+ * such as field names and types in the generated pages, the text keeps
+ * the link colour and becomes unreadable. Keep the dark background for
+ * code blocks only.
+ */
+:not(pre) > code.hljs {
+  background: var(--quote-bg);
+}
