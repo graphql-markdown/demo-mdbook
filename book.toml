@@ -11,6 +11,7 @@ build-dir = "book"
 no-section-label = true
 admonitions = true
 additional-css = ["./theme/github-dark-dimmed.min.css"]
+additional-js = ["./theme/footer.js"]
 git-repository-url = "https://github.com/graphql-markdown/demo-mdbook"
 
 [output.html.fold]
