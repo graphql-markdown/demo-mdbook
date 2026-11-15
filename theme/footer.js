@@ -1,7 +1,8 @@
 // mdBook has no footer hook short of overriding the whole index.hbs template,
-// so append a small footer to the main content area on each page.
+// so append a small footer to the main content area on each page
+// (#mdbook-content in mdBook 0.5+, #content in 0.4).
 (function () {
-  var main = document.querySelector("#content main");
+  var main = document.querySelector("#mdbook-content main, #content main");
   if (!main) return;
   var footer = document.createElement("footer");
   footer.className = "gqlmd-footer";
