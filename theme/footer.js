@@ -10,7 +10,7 @@
     'Generated with <a href="https://graphql-markdown.dev">GraphQL-Markdown</a>' +
     ' · <a href="https://github.com/graphql-markdown/graphql-markdown">⭐ Star on GitHub</a>';
   footer.style.cssText =
-    "box-sizing:border-box;width:100%;max-width:var(--content-max-width);margin:3em auto 0;padding-top:1em;border-top:1px solid var(--table-border-color);font-size:0.9em;color:var(--sidebar-non-existant)";
+    "box-sizing:border-box;width:100%;text-align:center;max-width:var(--content-max-width);margin:3em auto 0;padding-top:1em;border-top:1px solid var(--table-border-color);font-size:0.9em;color:var(--sidebar-non-existant)";
 
   // Keep the footer at the bottom of the viewport on short pages: the page
   // fills the viewport (plus the menu bar placeholder it overlaps) and the

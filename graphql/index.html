@@ -36,10 +36,10 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-1c5c8628.js";
+            window.path_to_searchindex_js = "../searchindex-94f886d7.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-1bf42b9e.js"></script>
+        <script src="../toc-8da1a3a1.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -182,20 +182,20 @@
 <li>Frontmatter is suppressed — mdBook renders <code>---</code> as literal content, so the formatter returns an empty string instead.</li>
 <li>Admonitions fall back to blockquote style (<code>&gt; **NOTE**</code>) since mdBook has no native admonition syntax.</li>
 <li>Links keep the <code>.md</code> extension — mdBook resolves them natively.</li>
-<li>A <code>SUMMARY.md</code> is built after generation to wire all pages into the mdBook navigation.</li>
+<li><code>SUMMARY.md</code> wires all generated pages into the mdBook navigation.</li>
 </ul>
 <h2 id="generation-pipeline"><a class="header" href="#generation-pipeline">Generation pipeline</a></h2>
 <ol>
-<li><code>npm run generate</code> runs GraphQL-Markdown against <code>schema.graphql</code>.</li>
+<li><code>npm run generate</code> runs GraphQL-Markdown against the <a href="https://github.com/graphql-markdown/graphql-markdown/blob/main/tests/e2e/__data__/demo_schema.graphql">shared demo schema</a>, loaded from its URL.</li>
 <li>Pages are written to <code>src/graphql/</code> using the mdBook formatter.</li>
-<li><code>src/SUMMARY.md</code> is rebuilt by scanning the output directory.</li>
+<li><code>src/SUMMARY.md</code> wires the generated pages into the mdBook navigation.</li>
 <li><code>mdbook serve</code> / <code>mdbook build</code> renders the final site.</li>
 </ol>
 <h2 id="key-files"><a class="header" href="#key-files">Key files</a></h2>
 <ul>
-<li><code>scripts/generate-docs.mjs</code> — runs GraphQL-Markdown and rebuilds <code>SUMMARY.md</code>.</li>
+<li><code>scripts/generate-docs.mjs</code> — runs GraphQL-Markdown.</li>
+<li><code>src/SUMMARY.md</code> — mdBook navigation, listing the generated pages.</li>
 <li><code>scripts/custom-mdbook-mdx.mjs</code> — wraps the mdBook formatter preset.</li>
-<li><code>schema.graphql</code> — source GraphQL schema (countries API).</li>
 <li><code>book.toml</code> — mdBook configuration.</li>
 </ul>
 
@@ -207,7 +207,7 @@
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                             </a>
 
-                            <a rel="next prefetch" href="../graphql/operations/queries/continents.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../graphql/operations/queries/folders.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                             </a>
 
@@ -221,7 +221,7 @@
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                     </a>
 
-                    <a rel="next prefetch" href="../graphql/operations/queries/continents.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../graphql/operations/queries/folders.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                     </a>
             </nav>

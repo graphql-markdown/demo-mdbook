@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>countries - GraphQL-Markdown demo with mdBook</title>
+        <title>folders - GraphQL-Markdown demo with mdBook</title>
 
 
         <!-- Custom HTML head -->
@@ -36,10 +36,10 @@
             const path_to_root = "../../../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../../searchindex-1c5c8628.js";
+            window.path_to_searchindex_js = "../../../searchindex-94f886d7.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../../toc-1bf42b9e.js"></script>
+        <script src="../../../toc-8da1a3a1.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -175,22 +175,41 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="countries"><a class="header" href="#countries">countries</a></h1>
-<p>No description</p>
-<pre><code class="language-graphql">countries: [Country!]!
+                        <h1 id="folders"><a class="header" href="#folders">folders</a></h1>
+<p>List folders available in the current workspace.</p>
+<pre><code class="language-graphql">folders(
+  limit: Int
+  offset: Int
+): [Folder!]!
 </code></pre>
+<h3 id="arguments"><a class="header" href="#arguments">Arguments</a></h3>
+<h4 id="folderslimit--int-scalar"><a class="header" href="#folderslimit--int-scalar"><a href="#"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">folders</code>.<code class="gqlmd-mdx-entity-name">limit</code></span></a><span class="gqlmd-mdx-bullet"> ● </span><a href="../../types/scalars/int.html"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">Int</code></span></a> <strong>scalar</strong></a></h4>
+<p>Maximum number of folders to return.</p>
+<h4 id="foldersoffset--int-scalar"><a class="header" href="#foldersoffset--int-scalar"><a href="#"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">folders</code>.<code class="gqlmd-mdx-entity-name">offset</code></span></a><span class="gqlmd-mdx-bullet"> ● </span><a href="../../types/scalars/int.html"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">Int</code></span></a> <strong>scalar</strong></a></h4>
+<p>Number of folders to skip before returning results.</p>
 <h3 id="type"><a class="header" href="#type">Type</a></h3>
-<h4 id="country-object"><a class="header" href="#country-object"><a href="../../types/objects/country.html"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">Country</code></span></a> <strong>object</strong></a></h4>
+<h4 id="folder-object"><a class="header" href="#folder-object"><a href="../../types/objects/folder.html"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">Folder</code></span></a> <strong>object</strong></a></h4>
+<p>A virtual folder used to organize workspace resources.</p>
+<h3 id="example"><a class="header" href="#example">Example</a></h3>
+<pre><code class="language-graphql">query ListFolders {
+  folders {
+    id
+    name
+    parent
+    createdAt
+  }
+}
+</code></pre>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../../../graphql/operations/queries/continent.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../../../graphql/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                             </a>
 
-                            <a rel="next prefetch" href="../../../graphql/operations/queries/country.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../../../graphql/operations/queries/folder.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                             </a>
 
@@ -200,11 +219,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../../../graphql/operations/queries/continent.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../../../graphql/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                     </a>
 
-                    <a rel="next prefetch" href="../../../graphql/operations/queries/country.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../../../graphql/operations/queries/folder.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                     </a>
             </nav>

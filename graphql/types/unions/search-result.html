@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>State - GraphQL-Markdown demo with mdBook</title>
+        <title>SearchResult - GraphQL-Markdown demo with mdBook</title>
 
 
         <!-- Custom HTML head -->
@@ -36,10 +36,10 @@
             const path_to_root = "../../../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../../searchindex-1c5c8628.js";
+            window.path_to_searchindex_js = "../../../searchindex-94f886d7.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../../toc-1bf42b9e.js"></script>
+        <script src="../../../toc-8da1a3a1.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -175,30 +175,29 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="state"><a class="header" href="#state">State</a></h1>
-<p>No description</p>
-<pre><code class="language-graphql">type State {
-  code: String
-  name: String!
-  country: Country!
-}
+                        <h1 id="searchresult"><a class="header" href="#searchresult">SearchResult</a></h1>
+<p>A result returned from global workspace search.</p>
+<pre><code class="language-graphql">union SearchResult = Folder | Project | User
 </code></pre>
-<h3 id="fields"><a class="header" href="#fields">Fields</a></h3>
-<h4 id="statecode--string-scalar"><a class="header" href="#statecode--string-scalar"><a href="#"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">State</code>.<code class="gqlmd-mdx-entity-name">code</code></span></a><span class="gqlmd-mdx-bullet"> ● </span><a href="../scalars/string.html"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">String</code></span></a> <strong>scalar</strong></a></h4>
-<h4 id="statename--string-non-null-scalar"><a class="header" href="#statename--string-non-null-scalar"><a href="#"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">State</code>.<code class="gqlmd-mdx-entity-name">name</code></span></a><span class="gqlmd-mdx-bullet"> ● </span><a href="../scalars/string.html"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">String!</code></span></a> <strong>non-null</strong> <strong>scalar</strong></a></h4>
-<h4 id="statecountry--country-non-null-object"><a class="header" href="#statecountry--country-non-null-object"><a href="#"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">State</code>.<code class="gqlmd-mdx-entity-name">country</code></span></a><span class="gqlmd-mdx-bullet"> ● </span><a href="./country.html"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-name">Country!</code></span></a> <strong>non-null</strong> <strong>object</strong></a></h4>
-<h3 id="member-of"><a class="header" href="#member-of">Member Of</a></h3>
-<p><a href="./country.html"><code>Country</code></a>  <strong>object</strong></p>
+<h3 id="possible-types"><a class="header" href="#possible-types">Possible types</a></h3>
+<h4 id="searchresultfolder-object"><a class="header" href="#searchresultfolder-object"><a href="../objects/folder.html"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">SearchResult</code>.<code class="gqlmd-mdx-entity-name">Folder</code></span></a> <strong>object</strong></a></h4>
+<p>A virtual folder used to organize workspace resources.</p>
+<h4 id="searchresultproject-object"><a class="header" href="#searchresultproject-object"><a href="../objects/project.html"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">SearchResult</code>.<code class="gqlmd-mdx-entity-name">Project</code></span></a> <strong>object</strong></a></h4>
+<p>A unit of work tracked in the workspace.</p>
+<h4 id="searchresultuser-object"><a class="header" href="#searchresultuser-object"><a href="../objects/user.html"><span class="gqlmd-mdx-entity"><code class="gqlmd-mdx-entity-parent">SearchResult</code>.<code class="gqlmd-mdx-entity-name">User</code></span></a> <strong>object</strong></a></h4>
+<p>A workspace member who owns and collaborates on projects.</p>
+<h3 id="returned-by"><a class="header" href="#returned-by">Returned By</a></h3>
+<p><a href="../../operations/queries/search.html"><code>search</code></a>  <strong>query</strong></p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../../../graphql/types/objects/language.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../../../graphql/types/interfaces/node.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                             </a>
 
-                            <a rel="next prefetch" href="../../../graphql/types/scalars/id.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../../../graphql/types/inputs/create-project-input.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                             </a>
 
@@ -208,11 +207,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../../../graphql/types/objects/language.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../../../graphql/types/interfaces/node.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                     </a>
 
-                    <a rel="next prefetch" href="../../../graphql/types/scalars/id.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../../../graphql/types/inputs/create-project-input.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                     </a>
             </nav>
