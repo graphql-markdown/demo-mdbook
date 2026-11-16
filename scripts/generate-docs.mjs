@@ -16,13 +16,13 @@ rmSync(resolve("./src/graphql"), { force: true, recursive: true });
 
 await runGraphQLMarkdown(
   {
-    schema: "./schema.graphql",
+    schema: "https://raw.githubusercontent.com/graphql-markdown/graphql-markdown/main/tests/e2e/__data__/demo_schema.graphql",
     rootPath: "./src",
     baseURL: "graphql",
     homepage: "./index.md",
     formatter,
     loaders: {
-      GraphQLFileLoader: "@graphql-tools/graphql-file-loader",
+      UrlLoader: "@graphql-tools/url-loader",
     },
     pretty: true,
     force: true,
