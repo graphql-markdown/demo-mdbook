@@ -7,7 +7,8 @@
     "clean": "rm -rf ./src/graphql ./book",
     "generate": "node ./scripts/generate-docs.mjs",
     "dev": "npm run generate && mdbook serve",
-    "build": "npm run generate && mdbook build"
+    "build": "npm run generate && mdbook build",
+    "test:visual": "playwright test"
   },
   "dependencies": {
     "@graphql-markdown/cli": "^1.2.3",
@@ -17,5 +18,10 @@
   },
   "overrides": {
     "@graphql-markdown/utils": "^1.14.3"
+  },
+  "devDependencies": {
+    "@argos-ci/playwright": "^7.9.0",
+    "@playwright/test": "^1.65.1",
+    "serve": "^14.2.8"
   }
 }

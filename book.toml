@@ -1,5 +1,6 @@
 [book]
-title = "GraphQL-Markdown demo with mdBook"
+title = "GraphQL-Markdown mdBook Demo"
+description = "A generated GraphQL API reference for the workspace demo schema."
 authors = ["Gregory Heitz"]
 language = "en"
 src = "src"
@@ -9,11 +10,13 @@ build-dir = "book"
 
 [output.html]
 no-section-label = true
+default-theme = "light"
+preferred-dark-theme = "coal"
 # mdBook 0.5 lists page headings in the sidebar; the generated field headings
 # hold nested links and show up as blank entries there, so keep it off.
 sidebar-header-nav = false
 admonitions = true
-additional-css = ["./theme/github-dark-dimmed.min.css", "./theme/inline-code.css"]
+additional-css = ["./theme/github-dark-dimmed.min.css", "./theme/inline-code.css", "./theme/demo.css"]
 git-repository-url = "https://github.com/graphql-markdown/demo-mdbook"
 additional-js = ["./theme/footer.js"]
 
