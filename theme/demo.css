@@ -409,3 +409,9 @@ a:hover > .gqlmd-mdx-entity {
     gap: 2.4rem;
   }
 }
+
+/* No prev/next page navigation (side arrows and mobile buttons). */
+.nav-wrapper,
+.nav-wide-wrapper {
+  display: none;
+}
