@@ -1,12 +1,12 @@
 /*
  * GraphQL-Markdown demo polish for mdBook.
- * Violet accent + zinc neutrals; every colour goes through mdBook's own
+ * Rust-orange accent + zinc neutrals; every colour goes through mdBook's own
  * theme variables so the light/rust and coal/navy/ayu groups both work.
  */
 
 .light,
 .rust {
-  --gqlmd-accent: #6d28d9;
+  --gqlmd-accent: #b7410e;
   --gqlmd-chip-bg: #f4f4f5;
   --gqlmd-chip-border: #e4e4e7;
   --gqlmd-muted: #71717a;
@@ -27,7 +27,7 @@
 .coal,
 .navy,
 .ayu {
-  --gqlmd-accent: #b9a4ff;
+  --gqlmd-accent: #f0884f;
   --gqlmd-chip-bg: color-mix(in srgb, var(--fg) 8%, transparent);
   --gqlmd-chip-border: color-mix(in srgb, var(--fg) 18%, transparent);
   --gqlmd-muted: color-mix(in srgb, var(--fg) 60%, transparent);
@@ -329,8 +329,8 @@ a:hover > .gqlmd-mdx-entity {
 .gqlmd-schema-preview-chip {
   padding: 0.4rem 0.8rem;
   border-radius: 0.4rem;
-  background: rgb(196 181 253 / 0.1);
-  color: #c4b5fd;
+  background: color-mix(in srgb, #f0884f 10%, transparent);
+  color: #f0884f;
   font-size: 1.2rem;
 }
 

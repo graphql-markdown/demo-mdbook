@@ -25,7 +25,7 @@ Open `http://127.0.0.1:3000/` and use the GraphQL API entry in the navigation.
 │   ├── custom-mdbook-mdx.mjs   # Wrapper that extends the mdBook preset
 │   └── generate-docs.mjs       # GraphQL-Markdown runner
 ├── theme/
-│   ├── demo.css                # Violet/zinc polish for generated pages + landing page
+│   ├── demo.css                # Rust-orange/zinc polish for generated pages + landing page
 │   ├── inline-code.css         # Inline code fix for the dark highlight theme
 │   ├── footer.js               # GraphQL-Markdown footer link-back
 │   └── github-dark-dimmed.min.css  # Custom dark theme
