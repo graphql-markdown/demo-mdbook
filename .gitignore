@@ -2,3 +2,7 @@ book
 .vscode/
 node_modules/
 src/graphql/
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
