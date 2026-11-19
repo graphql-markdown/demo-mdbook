@@ -415,3 +415,11 @@ a:hover > .gqlmd-mdx-entity {
 .nav-wide-wrapper {
   display: none;
 }
+
+/* ── Sidebar headings ─────────────────────────────────────────────────── */
+
+/* Section headings and collapsed parents (`[Queries]()`) have no link, so
+   mdBook paints them with --sidebar-non-existant, which is too faint. */
+.chapter li {
+  color: var(--sidebar-fg);
+}
