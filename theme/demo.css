@@ -423,3 +423,10 @@ a:hover > .gqlmd-mdx-entity {
 .chapter li {
   color: var(--sidebar-fg);
 }
+
+/* ── Header title ─────────────────────────────────────────────────────── */
+
+.menu-title {
+  color: var(--fg);
+  font-weight: 600;
+}
