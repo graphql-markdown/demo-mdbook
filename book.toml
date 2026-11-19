@@ -1,5 +1,5 @@
 [book]
-title = "GraphQL-Markdown mdBook Demo"
+title = "GraphQL-Markdown"
 description = "A generated GraphQL API reference for the workspace demo schema."
 authors = ["Gregory Heitz"]
 language = "en"

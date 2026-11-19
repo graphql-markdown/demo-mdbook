@@ -1,4 +1,4 @@
-import { rmSync } from "node:fs";
+import { readFileSync, rmSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { pathToFileURL } from "node:url";
 
@@ -33,3 +33,23 @@ await runGraphQLMarkdown(
   },
   {},
 );
+
+// The formatter lists entries in schema order; sort the children of every
+// sidebar section by name (e.g. `folder` before `folders`).
+const summaryPath = resolve("./src/SUMMARY.md");
+const lines = readFileSync(summaryPath, "utf8").split("\n");
+const sorted = [];
+for (let i = 0; i < lines.length; ) {
+  if (!lines[i].startsWith("  - [")) {
+    sorted.push(lines[i++]);
+    continue;
+  }
+  const group = [];
+  while (i < lines.length && lines[i].startsWith("  - [")) {
+    group.push(lines[i++]);
+  }
+  const name = (line) => line.match(/^ {2}- \[([^\]]*)\]/)[1];
+  group.sort((a, b) => name(a).localeCompare(name(b)));
+  sorted.push(...group);
+}
+writeFileSync(summaryPath, sorted.join("\n"));
