@@ -20,5 +20,5 @@ This site is generated from a GraphQL schema using [graphql-markdown](https://gi
 
 - `scripts/generate-docs.mjs` — runs GraphQL-Markdown.
 - `src/SUMMARY.md` — mdBook navigation, listing the generated pages.
-- `scripts/custom-mdbook-mdx.mjs` — wraps the mdBook formatter preset.
+- `lib/formatter.mjs` — wraps the mdBook formatter preset.
 - `book.toml` — mdBook configuration.

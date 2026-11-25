@@ -4,13 +4,10 @@ import { pathToFileURL } from "node:url";
 
 import { runGraphQLMarkdown } from "@graphql-markdown/cli";
 
-// Resolve from the demo's own node_modules so the formatter is reachable
-// when the core package performs a dynamic import of the formatter module.
-const { createRequire } = await import("node:module");
-const require = createRequire(import.meta.url);
-const formatter = pathToFileURL(
-  require.resolve("@graphql-markdown/formatters/mdbook"),
-).href;
+import { decorators } from "../lib/decorators.mjs";
+
+// Absolute URL: relative formatter paths resolve against the wrong directory.
+const formatter = pathToFileURL(resolve("./lib/formatter.mjs")).href;
 
 rmSync(resolve("./src/graphql"), { force: true, recursive: true });
 
@@ -24,6 +21,7 @@ await runGraphQLMarkdown(
     loaders: {
       UrlLoader: "@graphql-tools/url-loader",
     },
+    decorators,
     pretty: true,
     force: true,
     telemetry: false,
